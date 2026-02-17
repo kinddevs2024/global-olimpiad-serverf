@@ -170,7 +170,7 @@ const Dashboard = () => {
       // Otherwise, prepend /api if in dev mode, or construct full URL
       const API_BASE_URL =
         import.meta.env.VITE_API_URL ||
-        "global-olimpiad-serverf-bek.vercel.appapi";
+        "https://global-olimpiad-serverf-bek.vercel.app";
       return logo.startsWith("/")
         ? `${API_BASE_URL}${logo}`
         : `${API_BASE_URL}/${logo}`;
@@ -490,7 +490,7 @@ const Dashboard = () => {
                       }
                       const API_BASE_URL =
                         import.meta.env.VITE_API_URL ||
-                        "global-olimpiad-serverf-bek.vercel.appapi";
+                        "https://global-olimpiad-serverf-bek.vercel.app";
                       return logo.startsWith("/")
                         ? `${API_BASE_URL}${logo}`
                         : `${API_BASE_URL}/${logo}`;

@@ -1,7 +1,7 @@
 // Use direct server API by default (single-server deployment)
 export const API_BASE_URL =
   import.meta.env.VITE_API_URL ||
-  "global-olimpiad-serverf-bek.vercel.appapi";
+  "https://global-olimpiad-serverf-bek.vercel.app";
 
 const resolveSocketUrl = () => {
   const envSocketUrl = import.meta.env.VITE_SOCKET_URL;
