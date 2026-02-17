@@ -1335,7 +1335,7 @@ const UniversityPanel = () => {
               // Otherwise, prepend /api if in dev mode, or construct full URL
               const API_BASE_URL =
                 import.meta.env.VITE_API_URL ||
-                "https://kinddevs2024-global-olimpiad-v2-2-b.vercel.app/api";
+                "global-olimpiad-serverf-bek.vercel.appapi";
               return logo.startsWith("/")
                 ? `${API_BASE_URL}${logo}`
                 : `${API_BASE_URL}/${logo}`;
