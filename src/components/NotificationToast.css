@@ -1,0 +1,114 @@
+.notification-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 300px;
+  max-width: 400px;
+  z-index: 10000;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  animation: notificationSlideIn 0.3s ease;
+  opacity: 0;
+  transform: translateX(400px);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.notification-toast.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.notification-toast.success {
+  border-color: rgba(0, 255, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 255, 0, 0.15);
+  background: rgba(0, 255, 0, 0.05);
+}
+
+.notification-toast.error {
+  border-color: rgba(255, 0, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(255, 0, 0, 0.15);
+  background: rgba(255, 0, 0, 0.05);
+}
+
+.notification-toast.warning {
+  border-color: rgba(255, 255, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(255, 255, 0, 0.15);
+  background: rgba(255, 255, 0, 0.05);
+}
+
+.notification-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.notification-toast.success .notification-icon {
+  background: rgba(0, 255, 0, 0.2);
+  color: var(--success);
+}
+
+.notification-toast.error .notification-icon {
+  background: rgba(255, 0, 0, 0.2);
+  color: var(--error);
+}
+
+.notification-toast.warning .notification-icon {
+  background: rgba(255, 255, 0, 0.2);
+  color: var(--warning);
+}
+
+.notification-toast.info .notification-icon {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.notification-message {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.notification-close {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.notification-close:hover {
+  color: var(--text-primary);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .notification-toast {
+    min-width: 280px;
+    max-width: calc(100vw - 40px);
+    right: 20px;
+    left: 20px;
+  }
+}
+

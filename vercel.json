@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://kinddevs2024-global-olimpiad-v2-2-b.vercel.app/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}

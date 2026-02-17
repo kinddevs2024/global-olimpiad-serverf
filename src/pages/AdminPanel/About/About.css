@@ -1,0 +1,243 @@
+.about-page {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.hero-3d {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  padding: 40px;
+  color: var(--text-primary);
+  background: unset;
+  background-color: var(--bg-secondary);
+  background-image: none;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+/* Info Sections */
+.info-section {
+  position: relative;
+  min-height: 80vh;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.section-3d {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.section-body {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-body p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.value-card {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.value-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 30px var(--glow);
+  transform: translateY(-5px);
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.value-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.get-started-text {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  text-align: center;
+  display: inline-block;
+}
+
+.cta-button.primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+}
+
+.cta-button.primary:hover {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: 0 0 30px var(--glow-strong);
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.cta-button.secondary:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  box-shadow: 0 0 30px var(--glow-strong);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.home-footer {
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+/* Text Glow Effect */
+.text-glow {
+  text-shadow: 0 0 20px var(--glow), 0 0 40px var(--glow);
+}

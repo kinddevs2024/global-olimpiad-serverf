@@ -1,0 +1,49 @@
+.verify-email-page {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.verify-email-container {
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    z-index: 1;
+}
+
+.verify-email-card {
+    animation: scaleIn 0.5s ease;
+    text-align: center;
+}
+
+.verify-email-header {
+    margin-bottom: 24px;
+}
+
+.verify-email-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.verify-email-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.verify-email-actions {
+    display: grid;
+    gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .verify-email-container {
+        max-width: 100%;
+    }
+}

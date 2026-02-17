@@ -1,0 +1,333 @@
+.auth-page {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-card {
+  animation: scaleIn 0.5s ease;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Login button: same animation for all themes (overrides theme-specific button-primary) */
+body[data-theme="kid-friendly"] .auth-submit,
+.auth-submit {
+  margin-top: 8px;
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(79, 195, 247, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+body[data-theme="kid-friendly"] .auth-submit::before,
+.auth-submit::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+body[data-theme="kid-friendly"] .auth-submit:hover::before,
+.auth-submit:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+body[data-theme="kid-friendly"] .auth-submit:hover,
+.auth-submit:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(79, 195, 247, 0.4);
+}
+
+body[data-theme="kid-friendly"] .auth-submit:active,
+.auth-submit:active {
+  transform: translateY(0) scale(1);
+}
+
+body[data-theme="kid-friendly"] .auth-submit:disabled,
+.auth-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+body[data-theme="kid-friendly"] .auth-submit:disabled:hover,
+.auth-submit:disabled:hover {
+  transform: none;
+  box-shadow: 0 4px 16px rgba(79, 195, 247, 0.3);
+}
+
+.auth-switch {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.auth-switch-button {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.auth-switch-button:hover {
+  text-shadow: 0 0 10px var(--glow);
+}
+
+/* Google Login Styles */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border);
+}
+
+.auth-divider span {
+  padding: 0 16px;
+}
+
+.button-google {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.button-google:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.button-google:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Form Row for side-by-side fields */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Form Select */
+.form-select {
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* File Input */
+.file-input {
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.file-input::file-selector-button {
+  padding: 8px 16px;
+  margin-right: 12px;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-input::file-selector-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* File Preview */
+.file-preview {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.preview-image {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  object-fit: cover;
+}
+
+/* Textarea */
+textarea {
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-container {
+    max-width: 100%;
+  }
+}

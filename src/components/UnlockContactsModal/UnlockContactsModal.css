@@ -1,0 +1,50 @@
+/* Reuse verification modal styles */
+.unlock-info {
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  margin-top: 1rem;
+}
+
+.unlock-info p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.unlock-insufficient {
+  color: var(--error, #d32f2f);
+  font-weight: 600;
+}
+
+.unlock-buy-link {
+  display: block;
+  margin-top: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.unlock-buy-link:hover {
+  color: var(--accent-dark, #1976d2);
+}
+
+.unlock-buy-info {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.unlock-buy-info p {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+

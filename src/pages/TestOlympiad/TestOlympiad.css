@@ -1,0 +1,191 @@
+.test-olympiad-page {
+  min-height: 100%;
+  padding: 20px;
+  background: var(--bg-primary);
+  padding-right: 240px;
+  /* Space for monitor */
+}
+
+.olympiad-loading,
+.olympiad-submitted {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitted-card {
+  text-align: center;
+  max-width: 400px;
+}
+
+.submitted-card h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: var(--success);
+}
+
+.olympiad-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Blocking overlay when recording is not active */
+.recording-block-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.blocking-message {
+  text-align: center;
+  max-width: 500px;
+  padding: 40px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.blocking-message h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.blocking-message p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.blocking-hint {
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-top: 20px !important;
+  font-size: 14px;
+}
+
+.olympiad-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 24px;
+}
+
+.olympiad-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.olympiad-timer {
+  flex-shrink: 0;
+}
+
+.olympiad-progress {
+  margin-bottom: 24px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px var(--glow);
+}
+
+.progress-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.questions-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.nav-button:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.nav-button.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg-primary);
+  box-shadow: 0 0 15px var(--glow);
+}
+
+.nav-button.answered {
+  background: var(--success);
+  border-color: var(--success);
+  color: var(--bg-primary);
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.olympiad-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.olympiad-actions button {
+  flex: 1;
+  padding: 14px 24px;
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .test-olympiad-page {
+    padding-right: 20px;
+  }
+
+  .olympiad-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

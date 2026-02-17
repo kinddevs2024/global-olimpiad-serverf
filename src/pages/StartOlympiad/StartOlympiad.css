@@ -1,0 +1,366 @@
+.start-olympiad-page {
+  min-height: 100%;
+  padding: 40px 20px;
+  background: var(--bg-primary);
+}
+
+.start-olympiad-loading {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-olympiad-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.start-header {
+  padding: 32px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.start-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.start-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.olympiad-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.info-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.time-info {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.time-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.time-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.time-value {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Status Messages */
+.status-message {
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  animation: fadeIn 0.5s ease;
+}
+
+.status-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.status-content {
+  flex: 1;
+}
+
+.status-content h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.status-content p {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.status-note {
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+
+.status-warning {
+  border-left: 4px solid var(--warning);
+  background: rgba(255, 255, 0, 0.05);
+}
+
+.status-error {
+  border-left: 4px solid var(--error);
+  background: rgba(255, 0, 0, 0.05);
+}
+
+/* Instructions */
+.instructions-section,
+.proctoring-notice,
+.rules-section,
+.consent-section {
+  padding: 32px;
+  animation: fadeIn 0.5s ease;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.instruction-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.instruction-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.instruction-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.instruction-content p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Proctoring Notice */
+.proctoring-notice {
+  border-left: 4px solid var(--warning);
+  background: rgba(255, 255, 0, 0.05);
+}
+
+.proctoring-warning {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--warning);
+  margin-bottom: 16px;
+}
+
+.proctoring-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.proctoring-list li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding-left: 8px;
+}
+
+.proctoring-note {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* Rules */
+.rules-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rules-list li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.rules-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+/* Consent */
+.consent-section {
+  border: 2px solid var(--border);
+}
+
+.consent-checkbox {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.consent-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.consent-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.consent-checkbox input[type="checkbox"]:checked+.consent-text {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.consent-hint {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 32px 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.start-button {
+  font-size: 18px;
+  padding: 16px 48px;
+  min-width: 200px;
+}
+
+.start-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.start-button:not(:disabled) {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.start-button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--glow);
+}
+
+.start-button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+.error-state {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.error-state h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .start-title {
+    font-size: 28px;
+  }
+
+  .olympiad-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .time-info {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .start-button {
+    width: 100%;
+  }
+
+  .instructions-section,
+  .proctoring-notice,
+  .rules-section,
+  .consent-section {
+    padding: 24px;
+  }
+}

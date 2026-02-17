@@ -1,0 +1,66 @@
+.checker-panel-page {
+  min-height: 100%;
+  padding: 40px 20px;
+  background: var(--bg-primary);
+}
+
+.checker-loading {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checker-header {
+  text-align: center;
+  margin-bottom: 48px;
+  animation: fadeIn 0.5s ease;
+}
+
+.checker-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -2px;
+}
+
+.checker-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.olympiad-card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.olympiad-card-actions .button-primary,
+.olympiad-card-actions .button-secondary {
+  flex: 1;
+  min-width: 120px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
